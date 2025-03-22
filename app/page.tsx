@@ -240,9 +240,17 @@ function LatestProjects() {
   )
 }
 
+interface Testimonial {
+  id: number;
+  name: string;
+  role: string;
+  quote: string;
+  image: string;
+}
+
 function TestimonialPreview() {
   const [activeIndex, setActiveIndex] = useState(0)
-  const testimonials = [
+  const testimonials: Testimonial[] = [
     {
       id: 1,
       name: "Alexandra Williams",

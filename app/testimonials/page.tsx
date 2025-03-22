@@ -383,7 +383,19 @@ function FeaturedTestimonials() {
   )
 }
 
-function TestimonialCard({ testimonial, index }) {
+interface Testimonial {
+  id: number
+  name: string
+  role: string
+  location: string
+  quote: string
+  image: string
+  rating: number
+  propertyType: string
+  featured: boolean
+}
+
+function TestimonialCard({ testimonial, index }: { testimonial: Testimonial; index: number }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
